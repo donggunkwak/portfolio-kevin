@@ -19,7 +19,7 @@ Describe day in life of a quant. What do you do for work? Are there is a lot of 
 
 ## Raw Data
 ### Daniel Interview Notes
-<embed src="/assets/images/Daniel_interview.pdf" type="application/pdf" width="700px" height="700px"></embed>
+<embed src="/portfolio-kevin/assets/images/Daniel_interview.pdf" type="application/pdf" width="700px" height="700px"></embed>
 
 ### Max Interview Notes
-<embed src="/assets/images/Max_interview.pdf" type="application/pdf" width="700px" height="700px"></embed>
+<embed src="/portfolio-kevin/assets/images/Max_interview.pdf" type="application/pdf" width="700px" height="700px"></embed>
