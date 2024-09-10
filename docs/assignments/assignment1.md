@@ -17,10 +17,18 @@ Describe day of a 3rd year med student. After, ask how it differs from 1st and 2
 
 Describe day in life of a quant. What do you do for work? Are there is a lot of info from social media about market trends and such? How was social media for finding a job in quant? How often do you use social media to try to learn new musical ideas? Tell me about a musical idea you learned from social media and how you worked to implement it? Does social media help in your work? Are music educational videos actually helpful? Or do they fly by your head? What form of videos seems to work?
 
-## Raw Data
+## Raw Notes
 ### Daniel Interview Notes
-<iframe src="https://donggunkwak.github.io/portfolio-kevin/assignments/Daniel_interview.pdf" width="700px" height="700px"></iframe>
+![Daniel1](/assets/images/Daniel_Page_1.jpg){:width="400"}
 
+![Daniel2](/assets/images/Daniel_Page_2.jpg){:width="400"}
+
+![Daniel3](/assets/images/Daniel_Page_3.jpg){:width="400"}
 
 ### Max Interview Notes
-<iframe src="https://donggunkwak.github.io/portfolio-kevin/assignments/Max_interview.pdf" width="700px" height="700px"></iframe>
+
+![Max1](/assets/images/Max_Page_1.jpeg){:width="400"}
+
+![Max2](/assets/images/Max_Page_2.jpeg){:width="400"}
+
+![Max3](/assets/images/Max_Page_3.jpeg){:width="400"}
