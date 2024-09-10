@@ -31,18 +31,23 @@ However, even though Instagram was educational, he said "less than 5%" was actua
 
 ## Design Opportunities
 - Providing Credentials on Accounts
+
 For a place where many young, easily influenced teenagers and young adults will be getting a lot of information from, it is very easy to get false information from the internet and social media. In order to make information more trustworthy, I'm envisioning a way for professionals to verify their credentials on their accounts. In Daniel's interview, he stated the importance of how much false information there is from "fake" doctor influencers, but students could get less confused if they saw information from a reputable source, like a qualified doctor with a verified medical degree. However, this comes into question how this would be validated.
 
 - Interest Groups
+
 This would be some sort of page where people with similar interests would talk, ask questions, and post videos/pictures about the topic on. The idea would be somewhat similar to reddit, yet would have an easier function of chatting with the people in the same group. The goal of this would be to make it easier to learn things in the topic you're interested in, as people would only post educational things about that topic, and you could ask members for help and resources. This would also make it easier to receive content that you want to receive, as you're essentially "signing up" for the kind of videos you would get. Daniel says that something streamlined like this would be nice in his interview, as campus Interest groups exist, but are more in person and just announced on his medical school's GroupMe.
 
 - A Connection System
+
 Combining the two above together (Interest Groups and credentials), this would work as a way to connect people in the same field, similar to an application such as linkedIn, yet with a little less professionalism and more ease of access, since it is easy to just look at the professionals in your interest group. This would really help medical students like Daniel, who have to do a lot of outside research to find professionals he can shadow.
 
 - AI Integration for summarized content
+
 The goal of this opportunity would be to use AI to shorten content to make it easier to read, view, or understand. This could include making a very short summary of a video so the person could know if it was worth it to watch, or cutting parts of the video to just the most interesting or important parts. This helps catch people's attention, as Max and Daniel both talked about how their attention spans were not long enough to watch/read long form content. This would cut on time while getting more views and more information out. This is already somewhat being done with OpenEvidence in the medical field, which Daniel mentioned, but could be further enhanced to videos and posts made on this social media, not just papers. This AI generated short form content would then also have their longer form counterparts available to look at. This also could make a large difference in actually implementing what is watched, since you would have a summary of the video to look at so you wouldn't have to rewatch parts of the video again to understand the point.
 
 - Different post voting system
+
 Instead of just having a like dislike system, perhaps a system being more informative on how you felt the video was would be helpful. For example, having a voting system for "entertaining"/"engaging" and "informative" separated would be good. This is because the current hunch of the project is to work as an educational tool, but both Daniel and Max said that they use social media as a stress reliever and as a source of entertainment. This new voting system might be able to help better recommend posts that are working towards the goal of the educational social media tool I envisioned, while still keeping users engaged, but not to the point where it just becomes like other social media sites.
 
 ## Raw Notes
