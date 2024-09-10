@@ -7,16 +7,28 @@ export default defineConfig({
   // TODO: add your base here; this should be your repo name!
   base: "/portfolio-kevin/",
   themeConfig: {
+    
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
       { text: "Blogs", link: "/blogs" },
+      { text: "Assignments", link:"/assignments"},
+      { text: "About me", link: "/about"}
     ],
+    
 
     sidebar: [
       {
         text: "Blogs",
         link: "/blogs",
+      },
+      {
+        text: "Assignments",
+        link: "/assignments"
+      },
+      {
+        text: "About me",
+        link: "/about"
       },
     ],
 
