@@ -32,7 +32,7 @@ content: posts -> one Video or one String
 *-Actions-*
 ```
 createPost(author:User, t:ENUM[short, long, blog], content:Video/String):
-    generate post = ID
+    generate new post:ID
     posts += post
     post.author := author
     post.type := t
@@ -58,21 +58,20 @@ After a user registers with a username and password, they can authenticateas tha
 
 *-State-*
 ```
-users: set User->(username: String, password: String)
+users: User->(username: String, password: String)
 ```
 *Actions-*
 ```
 register(username:String, password:String):
     if username not in users: 
-        users+= new ID -> (username,password)
+        users+= new User-> (username,password)
 
 authenticate(username:String, password:String):
     if (username,password) in users:
         authenticate
 
 changeUsername(user:User, username:String):
-    if user == currentUser and username not in users:
-        users.user.username := username
+    user.users.username := username
 ```
 ### Sessioning [ User ]
 
@@ -114,12 +113,12 @@ nonVerifiedUsers: set User
 *-Actions-*
 ```
 verifyUser(user:User):
-    nonVerifiedUsers -= user
-    verifiedUsers += user
+    nonVerifiedUsers -= user if user in nonVerifiedUsers
+    verifiedUsers += userif user not in verifiedUsers
 
 unverifyUser(user:User):
-    nonVerifiedUsers += user
-    verifiedUsers -= user
+    nonVerifiedUsers += user if user not in nonVerifiedUsers
+    verifiedUsers -= user if user in verifiedUsers
 ```
 ### Liking [ Item, User ]
 
@@ -209,6 +208,45 @@ deleteComment(item:Item, user:User, comment:String):
     assert (user,comment) in item.comments
     item.comments -= (user,comment)
 ```
+## Synchronizations
+![Sync1](/assets/images/assignment3/AuthSessVerifSync.jpeg){:width="800"}
 
 ## Dependency Diagram
 ![Dependency](/assets/images/assignment3/DependencyDiagram.png){:width="800"}
+
+## [Wireframes](https://www.figma.com/design/Cw5dTQxVBidW0SUZQQSlCO/A3Wireframes---Kevin-Kwak?node-id=0-1&t=ODuAhGwTWyb6zlsx-1)
+
+
+## Design Tradeoffs
+1. Facebook Reaction Overload
+
+Back in A2, I had features for many different types of reactions for posts, like liking, if it was informational, or if it was correct/incorrect. I decided to change it after seeing the most recent lecture criticizing Facebook's reactions, and how loosening reactions was also a bad idea.
+
+My options were:
+- Keep the old design
+- Just have likes/dislikes
+- Just have correctness
+- Some mix of the above
+
+I went with having likes and a correct/incorrect voting system. This is because the correct/incorrect voting system was crucial to the key goal of my app, yet I felt like it needed some sort of liking system for sorting and promoting media. Furthermore, the informational vote seemed redundant.
+
+2. Media Choices
+
+I wasn't sure on what media to have, and how to implement posting these.
+
+My choices for media were:
+- Short Videos
+- Long Videos
+- Blog posts
+
+I ended up making it so that all 3 were included, though I'm not too confident on this. I believed that all 3 types of media were important enough, yet I'm worried that too many choices may cause one type to die out. I also just made it so that all three would be posted in the same interface, just with a note on how to post each.
+
+3. How to Find Content?
+
+I wasn't sure on how to make it so Users could find content.
+
+Options:
+- Search
+- Scroll
+
+I ended up choosing the latter, mostly due to how much easier it would be to implement as a proof of concept, as searching would require another concept. However, I also chose it as such since I felt like much more people in recent times would just scroll until they found some media they found interesting (as evidenced from A1 interview)
