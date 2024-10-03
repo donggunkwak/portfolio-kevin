@@ -4,6 +4,10 @@ layout: doc
 ---
 
 # Brainwave
+[Github](https://github.com/donggunkwak/Brainwave)
+
+[Vercel](https://brainwave-pied-one.vercel.app/)
+
 ## Concepts
 ### Posting [ User ]
 
@@ -19,27 +23,19 @@ After making a post, other users can see the post and the user that made them.
 ```
 posts: set Post
 author: posts->one User
-creationDate: posts-> one Date
-type: posts-> ENUM[short, long, blog]
 content: posts -> one Video or one String
 ```
 
 *-Actions-*
 ```
-createPost(author:User, t:ENUM[short, long, blog], content:Video/String):
+createPost(author:User, content:Video/String):
     generate new post:Post
     posts += post
     post.author := author
-    post.type := t
     post.content := content
-    post.creationDate := Current Date
 
 deletePost(post:ID):
     posts -= post
-    post.author := None
-    post.type := None
-    post.content := None
-    post.creationDate := None
 ```
 ### Authenticating
 
@@ -106,7 +102,7 @@ verifiedUsers: set User
 nonVerifiedUsers: set User
 verifyRequests: set Request
 requestUser: verifyRequests -> one User
-requestContent: verifyRequests -> one Image or one String
+requestContent: verifyRequests -> one Image and/or one String
 
 
 ```
@@ -202,7 +198,7 @@ After making a comment on an item, a user can see the comments made with the ite
 
 *-State-*
 ```
-comments: Item-> set (User, String)
+comments: Item-> set (author: User, content: String)
 ```
 *-Actions-*
 ```
@@ -217,4 +213,13 @@ deleteComment(item:Item, user:User, comment:String):
 ## Global Data Model
 app Brainwave
 
-    include Posting[User], Authenticating, Sessioning[User], ProfessionalVerifying[User], Liking[Item, User], CorrectnessVoting[User], Commenting[Item, User] 
+    include Posting[Authenticating.User], 
+    Authenticating, 
+    Sessioning[Authenticating.User], 
+    ProfessionalVerifying[Authenticating.User], 
+    Liking[Posting.Post/Commenting.Comment, Authenticating.User], 
+    CorrectnessVoting[Posting.Post/Commenting.Comment, Authenticating.User], 
+    Commenting[Posting.Post, Authenticating.User] 
+
+## Data Diagram
+![Diagram](/assets/images/assignment4/A4diagram.jpeg){:width="800"}
