@@ -49,20 +49,27 @@ After a user registers with a username and password, they can authenticateas tha
 
 *-State-*
 ```
-users: set User(username: String, password: String)
+users: set User
+username: users -> one String
+password: users -> one String
 ```
 *Actions-*
 ```
 register(username:String, password:String):
     if username not in users: 
-        users+= new User-> (username,password)
+        users+= new User
+        users.username = username
+        users.password = password
 
 authenticate(username:String, password:String, out auth:boolean):
     if (username,password) in users:
         auth = True
 
-changeUsername(username:String):
-    users.username := username
+changeUsername(user:User, username:String):
+    user.username := username
+
+updatePassword(user:User, password:String):
+    user.password := password
 ```
 ### Sessioning [ User ]
 
@@ -134,20 +141,20 @@ by popularity.
 
 *-State-*
 ```
-likedItems: User-> set of items
-numLikes: Item-> one Integer
+likes: set Like
+likedItem: likes -> one Item
+liker: likes -> one User
 ```
 
 *-Actions-*
 ```
-like(user:User, likedItem:Item):
-    user.likedItems += likedItem
-    likedItem.numLikes +=1
+like(user:User, likedItem:Item, out like:Like):
+    likes += like
+    like.liker = user
+    like.likedItem = likedItem
 
 removeLike(user:User, likedItem:Item):
-    assert likedItem in user.likedItem
-    user.likedItems -= likedItem
-    likedItem.numLikes -=1
+    likes -= Like(user,likedItem)
 ```
 
 ### Correctness Voting [ Item, User ]
@@ -162,29 +169,27 @@ After many users vote on the correctness of different items, other users can see
 
 *-State-*
 ```
-userVote: User-> set (Item, ENUM[correct, incorrect])
-numCorrect: Item-> one Integer
-numIncorrect: Item-> one Integer
+votes: set Vote
+voteType: votes-> one ENUM{Correct,False}
+voter: votes -> one User
+votedItem: votes -> one Item
 ```
 *-Actions-*
 ```
-voteCorrect(user:User, votedItem:Item):
-    assert votedItem not in user.userVote
-    votedItem.numCorrect+=1
-    user.userVote += (votedItem, correct)
+voteCorrect(user:User, votedItem:Item, out vote: Vote):
+    votes += vote
+    vote.voter = user
+    vote.voteType = Correct
+    vote.votedItem = votedItem
 
 voteIncorrect(user:User, votedItem:Item):
-    assert votedItem not in user.userVote
-    votedItem.numIncorrect+=1
-    user.userVote += (votedItem, incorrect)
+    votes += vote
+    vote.voter = user
+    vote.voteType = Incorrect
+    vote.votedItem = votedItem
 
 removeVote(user:User, votedItem:Item):
-    assert votedItem in user.userVote
-    if user.userVote[ 1 ] == correct:
-        votedItem.numCorrect-=1
-    else if user.userVote[ 1 ] == incorrect:
-        votedItem.numIncorrect-=1
-    user.userVote -= votedItem
+    votes -= Vote(user, votedItem)
 ```
 ### Commenting [ Item, User ]
 
@@ -198,16 +203,21 @@ After making a comment on an item, a user can see the comments made with the ite
 
 *-State-*
 ```
-comments: Item-> set (author: User, content: String)
+comments: set Comment
+author: comments -> one User
+item: comments -> one Item
+content: comments -> one String
 ```
 *-Actions-*
 ```
-makeComment(item:Item, user:User, comment:String):
-    item.comments += (user,comment)
+makeComment(item:Item, user:User, content:String, out comment: Comment):
+    comments+= comment
+    comment.item = item
+    comment.author = user
+    comment.content = content
 
-deleteComment(item:Item, user:User, comment:String):
-    assert (user,comment) in item.comments
-    item.comments -= (user,comment)
+deleteComment(item:Item, user:User, content:String):
+    comments -= Comment(user,item,content)
 ```
 
 ## Global Data Model
