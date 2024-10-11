@@ -233,3 +233,23 @@ app Brainwave
 
 ## Data Diagram
 ![Diagram](/assets/images/assignment4/A4diagram.jpeg){:width="800"}
+
+## Design Reflection
+
+A large thing that needed to be resolved was videos, photos, and just how media was handled. With limited access to storing media,
+I had to make the decision to just have text available for the backend, and would have the text hold links to videos or photos,
+most likely from a google drive upload. I could've tried to make something for direct uploads, but another student had
+asked a similar question in the Discourse, to which a TA replied that it wasn't worth the time investment as it would take away
+from the goals of the class, so I decided against it.
+
+Another ambiguity was how the professional verification concept would work, like who would be able to verify it. Because of this,
+I ended up making it so that the users also have an "admin" variable, that sets to true if they are an admin. I'm a little worried
+about the safety of this feature, but wasn't sure how to secure it. However, this way, any "admin" user can approve or reject
+verification requests from other users. This was also an ambiguity I needed to figure out, as I was not sure how users would make
+requests. I ended up making RequestVerifyDocs, similar to the friend requests docs (which I didn't use in the app but used as reference),
+that users could submit. The alternative was just to have the verification requests be a thing separate from the app entirely,
+perhaps using google forms or some other outside tool, but I decided against it so I could fully test all my features. 
+
+There were a lot of details about my concepts that I hadn't fully thought of in my previous assignments, so implementing them
+definitely caused me to rethink a lot of design decisions and choose the way I would represent my concepts. I like the way
+my implementation turned out, even though it definitely took a lot of changing of states and actions for the concepts.
