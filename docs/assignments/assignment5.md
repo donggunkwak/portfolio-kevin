@@ -48,3 +48,6 @@ layout: doc
 - I made sure to use very similar icons to those of other social media apps to make it very clear on the button functionalities.
 - I also like that my bottom bar was always consistently present, so users would never get too lost
 - I think something I dislike about the consistency actually, is how similar the post and verification submission page are. This could serve to be confusing to the user on what page it is, and instead perhaps some color changes would suffice to serve as a distinction.
+
+## [Visual Design Study](https://docs.google.com/presentation/d/1mazJGSaowX4Mcu1EKo0K8Mt_o25B2U-hkf4iUyvxQy0/edit?usp=sharing)
+
