@@ -1,0 +1,16 @@
+---
+title: "Response to Matthew Sequeira's 'Reflections on Building a Company That Cares'"
+layout: doc
+---
+
+# Response to Matthew Sequeira's 'Reflections on Building a Company That Cares': How the Video Game Industry is Falling.
+
+Hi Matthew, I really enjoyed your blog post reflecting on how most tech companies prioritize money and exposure over their values and goals. It really feels this way with a lot of apps that are made nowadays, as many companies scramble after their app has generated enough negative feedback to "fix" the experience for users. This isn't just with tech companies making social media apps, but applies to all sorts of fields, and the first one I thought of was the video game industry.
+
+Video games were made with the purpose of being entertaining and attracting public interest and support for computers in the 1950s ([Video game History](https://americanhistory.si.edu/collections/object-groups/the-father-of-the-video-game-the-ralph-baer-prototypes-and-electronic-games/video-game-history#:~:text=These%20early%20computer%20programmers%20weren,large%20companies%20could%20afford%20them.)). And while many games, especially ones made by indie developers, still focus on being entertaining or a nice experience for the user, many other larger companies have succumbed to their greed and stopped caring as much for the players. 
+
+In 2006, the first microtransaction was sold by a major publisher, when Bethseda sold cosmetic horse armor in "The Elder Scrolls IV". From then on, in 2008, IOS store launched on Apple Iphones, and for the next three years games made over $3.6 billion in revenue from microtransactions ([Microtransactions](https://en.wikibooks.org/wiki/Lentis/Microtransactions_in_Videogames#:~:text=The%20first%20microtransaction%20sold%20by,cosmetic%20item%20was%20too%20much.)). 
+
+Prior to this, many games stuck to the belief that buying a game would allow for a player to have all the content available to them. Today, though, many companies saw the success of microtransactions and have put as much effort as possible into pushing their greedy microtransactions into players' faces to make a quick buck. A big example of this is the introductions of "battle passes", which were a concept popularized by the video game Fortnite. These progression based unlock systems are basically a company's way of keeping players hooked into the game while constantly taking money from them. They cost a certain amount of money, usually not too much (around $10), which seems like a very good deal for all the rewards. However, these rewards are only attainable by playing hours and hours of the game usually, which keep the player playing the game to try and get all the rewards until the next month, when the new battle pass arrives. This keeps them in a constant loop of paying money, and it's hard for many to just stop paying, as many items may be "limited edition", or even provide an unfair advantage in gameplay. I myself dislike the battle pass system a lot, and do not pay for them.
+
+Companies that don't care for their users not only exist in the social media realm, they also are very present in the video game industry as well. I'm extremely curious to learn how corrupt companies are in other fields as well.
