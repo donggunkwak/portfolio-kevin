@@ -23,6 +23,7 @@ layout: doc
 2. Smash Bros Ultimate
 3. Anime
 4. Working out
+5. Pokemon
 
 
 
